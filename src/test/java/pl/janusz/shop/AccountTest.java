@@ -28,7 +28,7 @@ public class AccountTest {
         mainPage.loginToCustomerAccount();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginData("jnqsboktevdkfdnkvx@nbmbb.com", "trelemorele");
+        loginPage.loginData(loginPage.mailAccount, loginPage.passwdAccount);
         Assert.assertEquals("Janusz No", loginPage.returnUsername());
     }
 
