@@ -23,7 +23,10 @@ public class AccountTest {
     }
 
     @Test
-    public void testLoginToAccount() {
+    public void testAddNewAddressToAccount() {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.loginToCustomerAccount();
+
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginData("jnqsboktevdkfdnkvx@nbmbb.com", "trelemorele");
         Assert.assertEquals("Janusz No", loginPage.returnUsername());
@@ -31,6 +34,6 @@ public class AccountTest {
 
     @After
     public void tearDown() {
-        driver.quit();
+   //     driver.quit();
     }
 }

@@ -25,7 +25,7 @@ public class LoginPage {
         passwdData.sendKeys(passwd);
 
         WebElement signInButton = driver.findElement(By.id("submit-login"));
-        signInButton.clear();
+        signInButton.click();
     }
 
     public String returnUsername() {
